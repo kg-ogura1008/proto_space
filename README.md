@@ -63,22 +63,22 @@ belongs_to :prototype, counter_cache: :likes_count
 
 belongs_to :user, :prototype
 
-##protos-tag table
+## protos-tag table
 |Column|Type|Option|
 |------|----|------|
 |proto_id|references|null: false,foreign_key: true|
 |tag_id|references|null: false,foreign_key: true|
 
-###association
+### association
 
 belongs_to :proto, :tag
 
-##tags table
+## tags table
 |Column|Type|Option|
 |------|----|------|
 |lavel|string|
 
-###association
+### association
 
 balongs_to :proto_tag
 
