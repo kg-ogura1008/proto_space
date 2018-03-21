@@ -2,6 +2,7 @@ Structure of DataBase
 
 ## Users table
 |Column|Type|Option|
+|------|----|------|
 |nama|string|null: false, unique: true|
 |email|string|ull: false, unique: true|
 |position|string|
@@ -15,7 +16,8 @@ has_many :comments, :likes, :prototypes
 
 ## Prototype table
 |Column|Type|Option|
-|user_id|integer|null: false,foreign_key: true, add_index|
+|------|----|------|
+|user_id|references|null: false,foreign_key: true, add_index|
 |title|string|
 |catchcopy|text|
 |concept|text|
@@ -29,6 +31,7 @@ belongs_to :user
 
 ## CapturedImage table
 |Column|Type|Option|
+|------|----|------|
 |proto_id|references|null: false,foreign_key: true|
 |tag_id|references|null: false,foreign_key: true|
 
@@ -39,6 +42,7 @@ belongs_to :prototype
 
 ## Likes table
 |Column|Type|Option|
+|------|----|------|
 |user_id|references|null: false,foreign_key: true|
 |prototype_id|references|null: false,foreign_key: true|
 
@@ -50,28 +54,31 @@ belongs_to :prototype, counter_cache: :likes_count
 
 ## Comments table
 |Column|Type|Option|
+|------|----|------|
 |content|text|
-|user_id|integer|null: false,foreign_key: true|
+|user_id|references|null: false,foreign_key: true|
 |prototype_id|references|null: false,foreign_key: true|
 
 ### association
 
 belongs_to :user, :prototype
 
-##protos-tag table
+## protos-tag table
 |Column|Type|Option|
+|------|----|------|
 |proto_id|references|null: false,foreign_key: true|
-|tag_id|integer|null: false,foreign_key: true|
+|tag_id|references|null: false,foreign_key: true|
 
-###association
+### association
 
 belongs_to :proto, :tag
 
-##tags table
+## tags table
 |Column|Type|Option|
+|------|----|------|
 |lavel|string|
 
-###association
+### association
 
 balongs_to :proto_tag
 
