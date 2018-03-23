@@ -40,10 +40,10 @@ ActiveRecord::Schema.define(version: 20180323005357) do
   end
 
   create_table "protos_tags", force: :cascade do |t|
-    t.integer  "proto_id",   limit: 4, null: false
-    t.integer  "tag_id",     limit: 4, null: false
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
+    t.integer  "prototype_id", limit: 4, null: false
+    t.integer  "tag_id",       limit: 4, null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "prototypes", force: :cascade do |t|

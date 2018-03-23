@@ -4,8 +4,8 @@ class Prototype < ActiveRecord::Base
     likes.find_by(user_id: user_id)
   end
   belongs_to :user
-  has_many :captured_images, dependent: :destroy
 
+  has_many :captured_images, dependent: :destroy
   accepts_nested_attributes_for :captured_images, reject_if: :reject_sub_images
 
   validates :title,
