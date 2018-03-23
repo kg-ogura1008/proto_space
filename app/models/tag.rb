@@ -1,4 +1,4 @@
 class Tag < ActiveRecord::Base
-  balongs_to :protos_tag
   has_many :protos_tags
+  has_many :prototypes, through: :protos_tags
 end
