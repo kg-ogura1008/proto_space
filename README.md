@@ -32,8 +32,10 @@ belongs_to :user
 ## CapturedImage table
 |Column|Type|Option|
 |------|----|------|
-|proto_id|references|null: false,foreign_key: true|
+|prototype_id|references|null: false,foreign_key: true|
 |tag_id|references|null: false,foreign_key: true|
+|content|varchar|
+|atatus|integer|
 
 ### association
 
@@ -48,7 +50,7 @@ belongs_to :prototype
 
 ### association
 
-belongs_to :user, 
+belongs_to :user,
 belongs_to :prototype, counter_cache: :likes_count
 
 
