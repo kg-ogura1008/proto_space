@@ -1,0 +1,46 @@
+
+
+Started GET "/" for ::1 at 2018-03-26 10:05:19 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (7.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PrototypesController#index as HTML
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/kanako/proto_space/app/assets/stylesheets/protospace.css.scss to /Users/kanako/proto_space/app/assets/stylesheets/protospace.scss. (called from _app_views_prototypes_index_html_haml___389087546125911460_70115476186200 at /Users/kanako/proto_space/app/views/prototypes/index.html.haml:3)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /Users/kanako/proto_space/app/assets/stylesheets/protospace.css.scss to /Users/kanako/proto_space/app/assets/stylesheets/protospace.scss. (called from _app_views_prototypes_index_html_haml___389087546125911460_70115476186200 at /Users/kanako/proto_space/app/views/prototypes/index.html.haml:3)
+  [1m[35mPrototype Load (10.1ms)[0m  SELECT `prototypes`.* FROM `prototypes`
+  Rendered prototypes/_prototype.html.haml (0.0ms)
+  Rendered prototypes/index.html.haml within layouts/application (3665.4ms)
+  Rendered shared/_header.html.haml (12.8ms)
+  Rendered shared/_messages.html.haml (2.4ms)
+  Rendered shared/_footer.html.haml (2.7ms)
+Completed 200 OK in 3811ms (Views: 3778.1ms | ActiveRecord: 14.4ms)
+
+
+Started GET "/" for ::1 at 2018-03-26 10:05:23 +0900
+Processing by PrototypesController#index as HTML
+  [1m[36mPrototype Load (0.3ms)[0m  [1mSELECT `prototypes`.* FROM `prototypes`[0m
+  Rendered prototypes/_prototype.html.haml (0.0ms)
+  Rendered prototypes/index.html.haml within layouts/application (3.0ms)
+  Rendered shared/_header.html.haml (0.8ms)
+  Rendered shared/_messages.html.haml (0.1ms)
+  Rendered shared/_footer.html.haml (0.0ms)
+Completed 200 OK in 33ms (Views: 32.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-73842e2dd1b48a0fc8213aaac1fa0655f19782979d8202580594c7dbb5f9e4e9.css?body=1" for ::1 at 2018-03-26 10:05:23 +0900
+
+
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for ::1 at 2018-03-26 10:05:23 +0900
+
+
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for ::1 at 2018-03-26 10:05:23 +0900
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2018-03-26 10:05:23 +0900
+
+
+Started GET "/assets/logo-b99f177af8fb82de2d6d7b86e95c7f329d3d143edd8b225bc2875ad9dd6e0cc3.png" for ::1 at 2018-03-26 10:05:23 +0900
+
+
+Started GET "/assets/header_logo-8d6ed49cb878026108dcfff6307c69ed2159e006f3ca557869cbfa1cc655a672.png" for ::1 at 2018-03-26 10:05:23 +0900
+
+
+Started GET "/assets/header_bg-7f8478d544f567fa0568c7851ea2a3d9b914a090658efc7770e6e1d85842b7ef.png" for ::1 at 2018-03-26 10:05:23 +0900
