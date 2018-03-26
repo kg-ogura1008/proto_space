@@ -73,7 +73,7 @@ belongs_to :user, :prototype
 
 ### association
 
-belongs_to :proto, :tag
+belongs_to :prototype, :tag
 
 ## tags table
 |Column|Type|Option|
