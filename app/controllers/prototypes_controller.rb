@@ -24,7 +24,6 @@ class PrototypesController < ApplicationController
     @comments = @prototype.comments.inclueds(:user)
     @catch_copy = @prototype.catch_copy.includes(:user)
     @concept = @prototype.concept.includes(:user)
-    
   end
 
   private
