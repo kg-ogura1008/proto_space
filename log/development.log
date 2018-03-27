@@ -1,0 +1,29 @@
+
+
+Started GET "/" for ::1 at 2018-03-27 09:18:00 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (4.7ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PrototypesController#index as HTML
+  [1m[35mPrototype Load (0.9ms)[0m  SELECT `prototypes`.* FROM `prototypes`
+  Rendered prototypes/_prototype.html.haml (0.0ms)
+  Rendered prototypes/index.html.haml within layouts/application (278.5ms)
+  [1m[36mUser Load (3.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered shared/_header.html.haml (63.2ms)
+  Rendered shared/_messages.html.haml (2.2ms)
+  Rendered shared/_footer.html.haml (2.0ms)
+Completed 200 OK in 436ms (Views: 352.4ms | ActiveRecord: 59.0ms)
+
+
+Started GET "/prototypes/new" for ::1 at 2018-03-27 09:18:19 +0900
+Processing by PrototypesController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered prototypes/new.html.haml within layouts/application (15.1ms)
+  Rendered shared/_header.html.haml (0.8ms)
+  Rendered shared/_messages.html.haml (0.1ms)
+  Rendered shared/_footer.html.haml (0.0ms)
+Completed 200 OK in 142ms (Views: 60.4ms | ActiveRecord: 47.8ms)
+
+
+Started GET "/assets/noimage-fd3ad275fb1eeb5833d37ea27786805eb20c588c67825da9e4ad6a22d43a86fe.png" for ::1 at 2018-03-27 09:18:19 +0900
+
+
+Started GET "/assets/noimage-big-25c2ec470f6bb4ba4724d25436f786aa9d9cc3e080300063eec413fc8d8ff65e.png" for ::1 at 2018-03-27 09:18:19 +0900
