@@ -17,7 +17,6 @@ ActiveRecord::Schema.define(version: 20180323005357) do
     t.string  "content",      limit: 255
     t.integer "status",       limit: 4
     t.integer "prototype_id", limit: 4
-    t.integer "tag_id",       limit: 4,   null: false
   end
 
   add_index "captured_images", ["prototype_id"], name: "index_captured_images_on_prototype_id", using: :btree
