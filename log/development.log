@@ -1808,3 +1808,157 @@ ActionController::RoutingError (No route matches [GET] "/uploads/noimage.png"):
   Rendered /Users/kanako/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
   Rendered /Users/kanako/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
   Rendered /Users/kanako/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (163.1ms)
+  [1m[36m (145.5ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (197.8ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to DeviseCreateUsers (20160323125221)
+  [1m[35m (159.1ms)[0m  CREATE TABLE `users` (`id` int(11) auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `name` varchar(255), `profile` text, `position` varchar(255), `occupation` text, `avatar` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (175.4ms)[0m  [1mCREATE UNIQUE INDEX `index_users_on_email`  ON `users` (`email`) [0m
+  [1m[35m (166.4ms)[0m  CREATE UNIQUE INDEX `index_users_on_reset_password_token`  ON `users` (`reset_password_token`) 
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20160323125221')
+  [1m[36m (40.9ms)[0m  [1mCOMMIT[0m
+Migrating to CreatePrototypes (20160405022458)
+  [1m[35m (127.3ms)[0m  CREATE TABLE `prototypes` (`id` int(11) auto_increment PRIMARY KEY, `title` varchar(255), `catch_copy` varchar(255), `concept` text, `user_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_prototypes_on_user_id`  (`user_id`) ) ENGINE=InnoDB
+  [1m[36m (196.8ms)[0m  [1mALTER TABLE `prototypes` ADD CONSTRAINT `fk_rails_8add56efc2`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20160405022458')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+Migrating to CreateCapturedImages (20160405022520)
+  [1m[36m (211.4ms)[0m  [1mCREATE TABLE `captured_images` (`id` int(11) auto_increment PRIMARY KEY, `content` varchar(255), `status` int(11), `prototype_id` int(11),  INDEX `index_captured_images_on_prototype_id`  (`prototype_id`) ) ENGINE=InnoDB[0m
+  [1m[35m (161.7ms)[0m  ALTER TABLE `captured_images` ADD CONSTRAINT `fk_rails_9e708a4f57`
+FOREIGN KEY (`prototype_id`)
+  REFERENCES `prototypes` (`id`)
+
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20160405022520')
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Migrating to AddLikeCountToPrototypes (20180322003616)
+  [1m[35m (205.8ms)[0m  ALTER TABLE `prototypes` ADD `like_count` int(11)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20180322003616')
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateLikes (20180322010618)
+  [1m[35m (138.5ms)[0m  CREATE TABLE `likes` (`id` int(11) auto_increment PRIMARY KEY, `user_id` int(11) NOT NULL, `prototype_id` int(11) NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20180322010618')
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateComments (20180323004148)
+  [1m[35m (144.0ms)[0m  CREATE TABLE `comments` (`id` int(11) auto_increment PRIMARY KEY, `user_id` int(11) NOT NULL, `prototype_id` int(11) NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (152.8ms)[0m  [1mALTER TABLE `comments` ADD CONSTRAINT `fk_rails_03de2dc08c`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+[0m
+  [1m[35m (197.5ms)[0m  ALTER TABLE `comments` ADD CONSTRAINT `fk_rails_5a7b40847a`
+FOREIGN KEY (`prototype_id`)
+  REFERENCES `prototypes` (`id`)
+
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20180323004148')
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to ActsAsTaggableOnMigration (20180329011125)
+  [1m[35m (215.0ms)[0m  CREATE TABLE `tags` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255)) ENGINE=InnoDB
+  [1m[36m (143.9ms)[0m  [1mCREATE TABLE `taggings` (`id` int(11) auto_increment PRIMARY KEY, `tag_id` int(11), `taggable_id` int(11), `taggable_type` varchar(255), `tagger_id` int(11), `tagger_type` varchar(255), `context` varchar(128), `created_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (143.6ms)[0m  CREATE  INDEX `index_taggings_on_tag_id`  ON `taggings` (`tag_id`) 
+  [1m[36m (166.5ms)[0m  [1mCREATE  INDEX `index_taggings_on_taggable_id_and_taggable_type_and_context`  ON `taggings` (`taggable_id`, `taggable_type`, `context`) [0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20180329011125')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+Migrating to AddMissingUniqueIndices (20180329011126)
+  [1m[36m (152.3ms)[0m  [1mCREATE UNIQUE INDEX `index_tags_on_name`  ON `tags` (`name`) [0m
+  [1m[35m (208.4ms)[0m  DROP INDEX `index_taggings_on_tag_id` ON `taggings`
+  [1m[36m (158.7ms)[0m  [1mDROP INDEX `index_taggings_on_taggable_id_and_taggable_type_and_context` ON `taggings`[0m
+  [1m[35m (201.7ms)[0m  CREATE UNIQUE INDEX `taggings_idx`  ON `taggings` (`tag_id`, `taggable_id`, `taggable_type`, `context`, `tagger_id`, `tagger_type`) 
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20180329011126')
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to AddTaggingsCounterCacheToTags (20180329011127)
+  [1m[35m (181.4ms)[0m  ALTER TABLE `tags` ADD `taggings_count` int(11) DEFAULT 0
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1mSELECT  `tags`.* FROM `tags`  ORDER BY `tags`.`id` ASC LIMIT 1000[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20180329011127')[0m
+  [1m[35m (0.7ms)[0m  COMMIT
+Migrating to AddMissingTaggableIndex (20180329011128)
+  [1m[36m (160.3ms)[0m  [1mCREATE  INDEX `index_taggings_on_taggable_id_and_taggable_type_and_context`  ON `taggings` (`taggable_id`, `taggable_type`, `context`) [0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20180329011128')[0m
+  [1m[35m (0.6ms)[0m  COMMIT
+Migrating to ChangeCollationForTagNames (20180329011129)
+  [1m[36m (268.5ms)[0m  [1mALTER TABLE tags MODIFY name varchar(255) CHARACTER SET utf8 COLLATE utf8_bin;[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20180329011129')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (14.0ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'protospace-in-dev_development'
+  AND fk.table_name = 'captured_images'
+
+  [1m[36m (0.3ms)[0m  [1mSHOW CREATE TABLE `captured_images`[0m
+  [1m[35m (0.5ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'protospace-in-dev_development'
+  AND fk.table_name = 'comments'
+
+  [1m[36m (0.3ms)[0m  [1mSHOW CREATE TABLE `comments`[0m
+  [1m[35m (0.4ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'protospace-in-dev_development'
+  AND fk.table_name = 'likes'
+
+  [1m[36m (0.2ms)[0m  [1mSHOW CREATE TABLE `likes`[0m
+  [1m[35m (0.3ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'protospace-in-dev_development'
+  AND fk.table_name = 'prototypes'
+
+  [1m[36m (0.2ms)[0m  [1mSHOW CREATE TABLE `prototypes`[0m
+  [1m[35m (0.3ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'protospace-in-dev_development'
+  AND fk.table_name = 'taggings'
+
+  [1m[36m (0.2ms)[0m  [1mSHOW CREATE TABLE `taggings`[0m
+  [1m[35m (0.3ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'protospace-in-dev_development'
+  AND fk.table_name = 'tags'
+
+  [1m[36m (0.2ms)[0m  [1mSHOW CREATE TABLE `tags`[0m
+  [1m[35m (0.3ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'protospace-in-dev_development'
+  AND fk.table_name = 'users'
+
+  [1m[36m (0.2ms)[0m  [1mSHOW CREATE TABLE `users`[0m

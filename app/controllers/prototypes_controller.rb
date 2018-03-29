@@ -36,6 +36,6 @@ class PrototypesController < ApplicationController
       :concept,
       :user_id,
       captured_images_attributes: [:content, :status]
-    )
+    ).merge(prototype_list: (params[:prototype][:tags]).values)
   end
 end
