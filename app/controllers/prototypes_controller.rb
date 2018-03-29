@@ -10,13 +10,14 @@ class PrototypesController < ApplicationController
     @prototype.captured_images.build
   end
 
+
   def create
     @prototype = Prototype.new(prototype_params)
     if @prototype.save
       redirect_to :root, notice: 'New prototype was successfully created'
     else
       redirect_to ({ action: new }), alert: 'New prototype was unsuccessfully created'
-     end
+    end
   end
 
   def destroy
@@ -26,19 +27,20 @@ class PrototypesController < ApplicationController
       prototype.destroy
     end
   end
-  
+
   def show
-    @proto_type = Prototype.find(params[:id])
+      @proto_type = Prototype.find(params[:id])
   end
 
+
   def edit
-    @prototype = Ptototype.find(params[:id])
+    @prototype = Prototype.find(params[:id])
   end
 
   def update
-    prototype = Ptototype.find[params[:id]]
-    if ptototype.user_id == current_user_id
-      prototype.update(prototype_parans)
+    @prototype = prototype.find(params[:id])
+    if prototype.user_id == current_user.id
+      prototype.update(prototype_params)
     end
   end
 
