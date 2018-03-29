@@ -1,88 +1,36 @@
-<<<<<<< Updated upstream
-%html
-  %head
-    %meta{:content => "text/html; charset=US-ASCII", "http-equiv" => "Content-Type"}/
-    %title Protospace
-    %link{"data-turbolinks-track" => "true", :href => "/assets/application.self-1b8819b96ffe597429f46b17aea66a5f0be11f05347ba622aeb5a1db664151c0.css?body=1", :media => "all", :rel => "stylesheet"}/
-    %script{"data-turbolinks-track" => "true", :src => "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1"}
-    %script{"data-turbolinks-track" => "true", :src => "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1"}
-    %script{"data-turbolinks-track" => "true", :src => "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1"}
-    %script{"data-turbolinks-track" => "true", :src => "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1"}
-    %script{"data-turbolinks-track" => "true", :src => "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1"}
-    %meta{:content => "authenticity_token", :name => "csrf-param"}/
-    %meta{:content => "8EFuhWzBudek0+oqQd1UErKHEskKiWRP2FHMadZ8lIwsaOsWmHTsUCSw3DFuP6shlhqUjT3ZmnWAJs05mwgfrg==", :name => "csrf-token"}/
-  %body
-    .navbar.navbar-default.navbar-static-top.navbar-fixed-top
-      .container
-        %button.navbar-toggle{"data-target" => ".navbar-responsive-collapse", "data-toggle" => "collapse", :type => "button"}
-          %span.icon-bar
-          %span.icon-bar
-          %span.icon-bar
-        .navbar-brand
-          %a{:href => "/"}
-            %img{:alt => "PROTO TYPE - SHARE THE PROTOTYPE", :height => "36px", :src => "/assets/logo-b99f177af8fb82de2d6d7b86e95c7f329d3d143edd8b225bc2875ad9dd6e0cc3.png"}/
-        .navbar-collapse.collapse.navbar-responsive-collapse
-          %ul.nav.navbar-nav.navbar-right
-            %li.dropdown
-              %a.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#", :role => "button"}
-                AKIRA
-                %span.caret
-              %ul.dropdown-menu{:role => "menu"}
-                %li
-                  %a{:href => "/users/1/edit"} Edit
-                %li
-                  %a{:href => "/users/1"} My Page
-                %li
-                  %a{"data-method" => "delete", :href => "/users/sign_out", :rel => "nofollow"} Logout
-            %li
-              .btn.btn-default
-                %a{:href => "/prototypes/new", :style => "color: #337ab7;"} New Photo
-    .container.proto-new
-      %form#new_prototype.new_prototype{"accept-charset" => "UTF-8", :action => "/prototypes", :enctype => "multipart/form-data", :method => "post"}
-        %input{:name => "utf8", :type => "hidden", :value => "✓"}/
-        %input{:name => "authenticity_token", :type => "hidden", :value => "4fgqLFPhxJcpy7F7VxWaX8yulrZZ8ThWVBZxBNoKcDc90a+/p1SREKmoh2B492Vs6DMQ8m6hxmwMYXBUl377FQ=="}/
-        %input#prototype_user_id{:name => "prototype[user_id]", :type => "hidden", :value => "1"}/
-        .col-md-8.col-md-offset-2
-          %header.row.user-nav.row
-            .col-md-12
-              %h4 Title
-              .proto-new-title
-                %input#prototype_title{:autofocus => "autofocus", :name => "prototype[title]", :placeholder => "Input Title", :required => "required", :type => "text"}/
-          .row
-            .col-md-12
-              %h4 Main Thumbnail
-              #main_image_uploader.cover-image-upload
-                %img/
-                %input#prototype_captured_images_attributes_0_content{:name => "prototype[captured_images_attributes][0][content]", :required => "required", :type => "file"}/
-                %input#prototype_captured_images_attributes_0_status{:name => "prototype[captured_images_attributes][0][status]", :type => "hidden", :value => "main"}/
-            .col-md-12
-              %h4 Sub Thumbnails
-              %ul.proto-sub-list.list-group
-                %li.list-group-item.col-md-4
-                  .image-upload
-                    %img/
-                    %input#prototype_captured_images_attributes_1_content{:name => "prototype[captured_images_attributes][1][content]", :type => "file"}/
-                    %input#prototype_captured_images_attributes_1_status{:name => "prototype[captured_images_attributes][1][status]", :type => "hidden", :value => "sub"}/
-                %li.list-group-item.col-md-4
-                  .image-upload
-                    %img/
-                    %input#prototype_captured_images_attributes_2_content{:name => "prototype[captured_images_attributes][2][content]", :type => "file"}/
-                    %input#prototype_captured_images_attributes_2_status{:name => "prototype[captured_images_attributes][2][status]", :type => "hidden", :value => "sub"}/
-                %li.list-group-item.col-md-4
-                  .image-upload
-                    %img/
-                    %input#prototype_captured_images_attributes_3_content{:name => "prototype[captured_images_attributes][3][content]", :type => "file"}/
-                    %input#prototype_captured_images_attributes_3_status{:name => "prototype[captured_images_attributes][3][status]", :type => "hidden", :value => "sub"}/
-          .row.proto-description
-            .col-md-12
-              %h4 Catch Copy
-              %input#prototype_catch_copy{:name => "prototype[catch_copy]", :placeholder => "Input Catch Copy", :require => "true", :type => "text"}/
-            .col-md-12
-              %h4 Concept
-              %textarea#prototype_concept{:name => "prototype[concept]", :placeholder => "Input Concept", :require => "true"}
-          .row.text-center.proto-btn
-            %input#button.btn.btn-lg.btn-primary.btn-block{:name => "commit", :type => "submit", :value => "PUBLISH"}/
-    .container
-      %footer
-        %p © PROTO SPACE 2015.
-
+.container.proto-new
+  = form_for @prototype do |f|
+    = f.hidden_field :user_id, value: current_user.id
+    .col-md-8.col-md-offset-2
+      %header.row.user-nav.row
+        .col-md-12
+          %h4 Title
+          .proto-new-title
+            = f.text_field :title, required: true, autofocus: true, placeholder: "Input Title"
+      .row
+        .col-md-12
+          %h4 Main Thumbnail
+          .cover-image-upload#main_image_uploader
+            = f.fields_for :captured_images do |image|
+              %img
+              = image.file_field :content, required: true
+              = image.hidden_field :status, value: "main"
+        .col-md-12
+          %h4 Sub Thumbnails
+          %ul.proto-sub-list.list-group
+            - 3.times do |i|
+              %li.list-group-item.col-md-4
+                .image-upload
+                  = f.fields_for :captured_images do |image|
+                    %img
+                    = image.file_field :content
+                    = image.hidden_field :status, value: "sub"
+      .row.proto-description
+        .col-md-12
+          %h4 Catch Copy
+          = f.text_field :catch_copy, require: true, placeholder: "Input Catch Copy"
+        .col-md-12
+          %h4 Concept
+          = f.text_area :concept, require: true, placeholder: "Input Concept"
+      .row.text-center.proto-btn
+        = f.submit "PUBLISH", id: "button", class: "btn btn-lg btn-primary btn-block"

@@ -24,7 +24,7 @@ class PrototypesController < ApplicationController
     @prototype = Prototype.find(params[:id])
     if prototype.user_id == current_user.id
       redirect_to :root, notice: 'Your prototypes was sucessfully deleted'
-      prototype.destroy
+      @prototype.destroy
     end
   end
 
@@ -41,6 +41,7 @@ class PrototypesController < ApplicationController
     @prototype = prototype.find(params[:id])
     if prototype.user_id == current_user.id
       prototype.update(prototype_params)
+      redirect_to user_path
     end
   end
 
