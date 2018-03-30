@@ -2,7 +2,7 @@ class PrototypesController < ApplicationController
   before_action :set_prototype, only: :show
 
   def index
-    @prototypes = Prototype.all
+    @prototypes = Prototype.all.page(params[:page]).per(2).order("created_at DESC")
   end
 
   def new
@@ -16,7 +16,7 @@ class PrototypesController < ApplicationController
       redirect_to :root, notice: 'New prototype was successfully created'
     else
       redirect_to ({ action: new }), alert: 'New prototype was unsuccessfully created'
-     end
+    end
   end
 
   def show
