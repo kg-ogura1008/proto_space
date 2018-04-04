@@ -5,6 +5,13 @@ class Prototype < ActiveRecord::Base
   end
   belongs_to :user
 
+<<<<<<< HEAD
+  has_many :protos_tags
+  has_many :tags, through: :protos_tags
+  has_many :comments
+
+=======
+>>>>>>> origin/edit-show
   has_many :captured_images, dependent: :destroy
   accepts_nested_attributes_for :captured_images, reject_if: :reject_sub_images
   acts_as_ordered_taggable_on :prototypes

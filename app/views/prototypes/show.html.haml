@@ -34,6 +34,30 @@
       %h4 Tag List
       %ul.proto-tag-list.list-inline
         %li
-          %a{href: "#", class: "btn btn-default"} 
-        %li
-          %a{href: "#", class: "btn btn-default"} 
+  .row.proto-comments
+    %h4.col-md-12 Comments
+    %span#comment_count.num
+    / = tag_count
+    .col-md-8
+      #comments
+        .media
+          .media-left
+            = link_to user_path(@prototype.user)
+            / = image_tag(@user.avatar.thumb, alt: "profile_photo", class: "media-object", style: "width: 64px; height: 64px;")
+          .media-body
+            %h4.media-heading#top-aligned-media 
+              / = @user.name
+            %p
+            / = @comment.text
+      .form-inline
+        .form
+          %h4 Write a comment
+          .row
+            .form-group.col-md-10
+            / - if current_user
+            = form_for prototype_path do |f|
+              = f.text_field :text, class: 'form_control', placeholder: 'Sign in to put your comment'
+              = f.submit "Comment",id:'button', class: 'btn btn-primary'
+
+
+ 
