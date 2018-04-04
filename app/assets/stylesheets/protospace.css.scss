@@ -612,6 +612,41 @@ body {
   font-weight: 200;
 }
 
+.row.proto-comment{
+  font-family: "Lato", 'Helvetica Neue, Helvetica, Arial', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #212121;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga", "kern";
+}
+
+
+.comments {
+  .h4 {
+    font-size: 30px;
+  }
+
+}
+
+.form {
+
+  &__comment {
+    width: 100%;
+    height: 80px;
+
+  }
+  &__submit {
+
+
+  }
+}
+
 
 /* -- flash messages ------------------------------------ */
 .alert {

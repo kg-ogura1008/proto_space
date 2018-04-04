@@ -33,22 +33,31 @@
     .col-md-3
       %h4 Tag List
       %ul.proto-tag-list.list-inline
-        / - prototype.tags.each do |tag|
         %li
-          / =link_to "/tags/#{@tags.id}", class: "btn btn-default"}
-          / = @tag.name
-    .row.proto-comment
-      - if current_user
-      .comments
-        %h5<コメント一覧>
-        - if @comments
-          - @comments.each do |comment|
-            = comment.text
-      / .from
-    /   = form_for "/prototypes/#{@portotype.id}/comments", metod: :post, id: "new_comments" do
-    /     = f.textfield :text, class: 'textbox', placeholder: 'コメントする' 
-    /     = f.submit 'Send', class: 'form_submit'
+  .row.proto-comments
+    %h4.col-md-12 Comments
+    %span#comment_count.num
+    / = tag_count
+    .col-md-8
+      #comments
+        .media
+          .media-left
+            = link_to user_path(@prototype.user)
+          .media-body
+            %4.media-heading 
+            / = user.name
+            %p
+            / = comment.text
+      .form-inline
+        .form
+          %4 Write a comment
+          .row
+            .form-group.col-md-10
+            / - if current_user
+            = form_for prototype_path do |f|
+              = f.text_field :text, class: 'form_control', placeholder: 'Sign in to put your comment'
+            .form-group.col-md-2
+              / = f.submit "Send", class: 'btn btn-primary'
 
-    
 
  
