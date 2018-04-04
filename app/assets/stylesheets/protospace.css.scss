@@ -625,28 +625,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -moz-font-feature-settings: "liga", "kern";
 }
-
-
-.comments {
-  .h4 {
-    font-size: 30px;
-  }
-
+.form_control {
+  width: 600px;
+  height: 80px;
 }
-
-.form {
-
-  &__comment {
-    width: 100%;
-    height: 80px;
-
-  }
-  &__submit {
-
-
-  }
-}
-
 
 /* -- flash messages ------------------------------------ */
 .alert {

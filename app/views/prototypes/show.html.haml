@@ -43,21 +43,21 @@
         .media
           .media-left
             = link_to user_path(@prototype.user)
+            / = image_tag(@user.avatar.thumb, alt: "profile_photo", class: "media-object", style: "width: 64px; height: 64px;")
           .media-body
-            %4.media-heading 
-            / = user.name
+            %h4.media-heading#top-aligned-media 
+              / = @user.name
             %p
-            / = comment.text
+            / = @comment.text
       .form-inline
         .form
-          %4 Write a comment
+          %h4 Write a comment
           .row
             .form-group.col-md-10
             / - if current_user
             = form_for prototype_path do |f|
               = f.text_field :text, class: 'form_control', placeholder: 'Sign in to put your comment'
-            .form-group.col-md-2
-              / = f.submit "Send", class: 'btn btn-primary'
+              = f.submit "Comment",id:'button', class: 'btn btn-primary'
 
 
  
