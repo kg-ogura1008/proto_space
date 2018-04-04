@@ -17,6 +17,7 @@ gem 'devise'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'kaminari'
+gem 'acts-as-taggable-on', '~> 3.4'
 
 group :development, :test do
   gem 'byebug'
