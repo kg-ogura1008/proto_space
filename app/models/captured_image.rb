@@ -1,5 +1,4 @@
 class CapturedImage < ActiveRecord::Base
-  belongs_to :tag
   belongs_to :Prototype
 
   mount_uploader :content, PrototypeImageUploader
