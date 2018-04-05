@@ -36,10 +36,12 @@ class PrototypesController < ApplicationController
   end
   
   def update
-    @prototype = prototype.find(params[:id])
-    if prototype.user_id == current_user.id
-      prototype.update(prototype_params)
-      redirect_to user_path
+    @prototype = Prototype.find(params[:id])
+    if @prototype.save
+      redirect_to :root, notice: 'Your Prototype was successfully updated'
+      @prototype.update(prototype_params)
+    else
+      render 'edit'
     end
   end
 
