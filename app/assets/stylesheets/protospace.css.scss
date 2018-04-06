@@ -292,6 +292,17 @@ body {
   .thumbnail {
     border-radius: 0;
     padding: 0;
+    .btn-tag {
+      width: 100%;
+      height: 50px;
+      border-radius: 2px;
+      background-color: #eee;
+      font-family: Lato, 'Helvetica Neue', 'Helvetica, Arial', sans-serif;
+      font-size: 2rem;
+      font-weight: 300;
+      color: #999;
+      padding: 5px 5px 3px;
+    }
   }
 
   h3 {
@@ -418,6 +429,8 @@ body {
     height: 500px;
     position: relative;
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
 
     input {
       position: absolute;
@@ -430,6 +443,10 @@ body {
       filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
       cursor: pointer;
     }
+    img {
+      max-height: 500px;
+      max-width: 100%;
+    }
   }
 
   .list-group-item {
@@ -440,6 +457,9 @@ body {
       background: image-url("noimage.png") #fff no-repeat center center;
       height: 200px;
       position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       input {
         position: absolute;
@@ -451,6 +471,10 @@ body {
         opacity: 0;
         filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
         cursor: pointer;
+      }
+      img {
+        max-height: 200px;
+        max-width: 100%;
       }
     }
 
@@ -612,6 +636,23 @@ body {
   font-weight: 200;
 }
 
+.row.proto-comment{
+  font-family: "Lato", 'Helvetica Neue, Helvetica, Arial', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #212121;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga", "kern";
+}
+.form_control {
+  width: 600px;
+  height: 80px;
+}
 
 /* -- flash messages ------------------------------------ */
 .alert {
@@ -633,5 +674,12 @@ body {
   background-color: #f2dede;
   border-color: #ebccd1;
   color: #a94442;
+}
+
+.tag-list-number {
+    display: block;
+    font-size: 1.3rem;
+    border-radius: 2px;
+    margin: 0 -2px 2px;
 }
 

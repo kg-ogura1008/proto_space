@@ -4,7 +4,9 @@ class Prototype < ActiveRecord::Base
     likes.find_by(user_id: user_id)
   end
   belongs_to :user
-
+  has_many :taggings
+  has_many :tags, through: :taggings
+  has_many :comments
   has_many :captured_images, dependent: :destroy
   accepts_nested_attributes_for :captured_images, reject_if: :reject_sub_images
   acts_as_ordered_taggable_on :prototypes

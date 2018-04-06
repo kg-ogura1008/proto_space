@@ -19,8 +19,33 @@ class PrototypesController < ApplicationController
     end
   end
 
+  def destroy
+    @prototype = Prototype.find(params[:id])
+    if prototype.user_id == current_user.id
+      redirect_to :root, notice: 'Your prototypes was sucessfully deleted'
+      @prototype.destroy
+    end
+  end
+
   def show
-    @proto_type = Prototype.find(params[:id])
+    @prototype = Prototype.find(params[:id])
+    @comment = Comment.new
+    @comments = @prototype.comments.includes(:user)
+    @tags = @prototype.tags
+  end
+
+  def edit
+    @prototype = Prototype.find(params[:id])
+  end
+
+  def update
+    @prototype = Prototype.find(params[:id])
+    @prototype.update(update_prototype_params)
+    if @prototype.save
+       redirect_to :root, notice: 'Your Prototype was successfully updated'
+    else
+      render 'edit'
+    end
   end
 
   private
@@ -36,5 +61,14 @@ class PrototypesController < ApplicationController
       :concept,
       :user_id,
       captured_images_attributes: [:content, :status]).merge(prototype_list: (params[:prototype][:tags]).values)
+  end
+
+    def update_prototype_params
+    params.require(:prototype).permit(
+      :title,
+      :catch_copy,
+      :concept,
+      :user_id,
+      captured_images_attributes: [:content, :status, :_destroy, :id])
   end
 end
