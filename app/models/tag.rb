@@ -1,5 +1,4 @@
 class Tag < ActiveRecord::Base
-  has_many :protos_tags
-  has_many :prototypes, through: :protos_tags
-  has_many :captured_images
+  has_many :taggings
+  has_many :prototypes, through: :taggings
 end

@@ -8,6 +8,7 @@
         .media-body
           %h4#top-aligned-media.media-heading
             = @prototype.title
+          %a.btn.btn-xs.navbar-inverse.btn-edit{href: "/prototypes/#{@prototype.id}/edit"} edit
           .proto-user
             by
             = link_to "#{@prototype.user.name}", user_path(@prototype.user)
@@ -32,8 +33,35 @@
         = @prototype.concept
     .col-md-3
       %h4 Tag List
-      %ul.proto-tag-list.list-inline
-        %li
-          %a{href: "#", class: "btn btn-default"} iPad
-        %li
-          %a{href: "#", class: "btn btn-default"} wireframe
+      %ul.list-inline
+        - @tags.each do |tag|
+          %li
+            %a.btn.btn-default{href: "#"}
+              #{tag.name}
+  .row.proto-comments
+    %h4.col-md-12 Comments
+    %span#comment_count.num
+    / = tag_count
+    .col-md-8
+      #comments
+        .media
+          .media-left
+            = link_to user_path(@prototype.user)
+            / = image_tag(@user.avatar.thumb, alt: "profile_photo", class: "media-object", style: "width: 64px; height: 64px;")
+          .media-body
+            %h4.media-heading#top-aligned-media
+              / = @user.name
+            %p
+            / = @comment.text
+      .form-inline
+        .form
+          %h4 Write a comment
+          .comment_slider_block
+            .comment_heigth_block
+              = render @comments
+          .row
+            .form-group.col-md-10
+            / - if current_user
+            = form_for [@prototype, @comment] do |f|
+              = f.text_field :text, class: 'form_control', placeholder: 'Sign in to put your comment'
+              = f.submit "Comment",id:'button', class: 'btn btn-primary'
