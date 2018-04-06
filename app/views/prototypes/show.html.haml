@@ -8,6 +8,7 @@
         .media-body
           %h4#top-aligned-media.media-heading
             = @prototype.title
+          %a.btn.btn-xs.navbar-inverse.btn-edit{href: "/prototypes/#{@prototype.id}/edit"} edit
           .proto-user
             by
             = link_to "#{@prototype.user.name}", user_path(@prototype.user)
