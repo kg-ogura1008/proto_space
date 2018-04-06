@@ -23,6 +23,7 @@ class PrototypesController < ApplicationController
     @prototype = Prototype.find(params[:id])
     @comment = Comment.new
     @comments = @prototype.comments.includes(:user)
+    @tags = @prototype.tags
   end
 
   private
