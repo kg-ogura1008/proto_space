@@ -14911,3 +14911,82 @@ ActionController::RoutingError (No route matches [GET] "/uploads/noimage.png"):
   Rendered /Users/kanako/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (151.2ms)
 =======
 >>>>>>> origin/edit-show
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to AddTextToComments (20180329012433)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to AddTextToComments (20180329012433)
+  [1m[35m (479.1ms)[0m  ALTER TABLE `comments` ADD `text` text
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (34.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20180329012433')
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (23.0ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'protospace-in-dev_development'
+  AND fk.table_name = 'captured_images'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `captured_images`
+  [1m[36m (1.0ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'protospace-in-dev_development'
+  AND fk.table_name = 'comments'
+[0m
+  [1m[35m (0.4ms)[0m  SHOW CREATE TABLE `comments`
+  [1m[36m (2.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'protospace-in-dev_development'
+  AND fk.table_name = 'likes'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `likes`
+  [1m[36m (0.4ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'protospace-in-dev_development'
+  AND fk.table_name = 'prototypes'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `prototypes`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'protospace-in-dev_development'
+  AND fk.table_name = 'taggings'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `taggings`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'protospace-in-dev_development'
+  AND fk.table_name = 'tags'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `tags`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'protospace-in-dev_development'
+  AND fk.table_name = 'users'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `users`

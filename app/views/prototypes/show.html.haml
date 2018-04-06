@@ -32,8 +32,9 @@
         = @prototype.concept
     .col-md-3
       %h4 Tag List
-      %ul.proto-tag-list.list-inline
+      %ul.list-inline
         %li
+          %a.btn.btn-default{href: "#"}
   .row.proto-comments
     %h4.col-md-12 Comments
     %span#comment_count.num
@@ -45,7 +46,7 @@
             = link_to user_path(@prototype.user)
             / = image_tag(@user.avatar.thumb, alt: "profile_photo", class: "media-object", style: "width: 64px; height: 64px;")
           .media-body
-            %h4.media-heading#top-aligned-media 
+            %h4.media-heading#top-aligned-media
               / = @user.name
             %p
             / = @comment.text
@@ -60,4 +61,4 @@
               = f.submit "Comment",id:'button', class: 'btn btn-primary'
 
 
- 
+
