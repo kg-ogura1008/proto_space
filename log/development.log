@@ -1,0 +1,294 @@
+
+
+Started GET "/groups/1/messages" for ::1 at 2018-04-02 10:49:37 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (20.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.5) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.5) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/keiji/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/keiji/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/keiji/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/keiji/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.9ms)
+  Rendered /Users/keiji/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/keiji/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/keiji/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (113.0ms)
+  Rendered /Users/keiji/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/keiji/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/keiji/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/keiji/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/keiji/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (146.5ms)
+  Rendered /Users/keiji/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/keiji/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/keiji/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (313.0ms)
+  [1m[36m (20.7ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (21.1ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to DeviseCreateUsers (20160323125221)
+  [1m[35m (28.5ms)[0m  CREATE TABLE `users` (`id` int(11) auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `name` varchar(255), `profile` text, `position` varchar(255), `occupation` text, `avatar` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (18.8ms)[0m  [1mCREATE UNIQUE INDEX `index_users_on_email`  ON `users` (`email`) [0m
+  [1m[35m (17.5ms)[0m  CREATE UNIQUE INDEX `index_users_on_reset_password_token`  ON `users` (`reset_password_token`) 
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (6.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20160323125221')
+  [1m[36m (6.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreatePrototypes (20160405022458)
+  [1m[35m (28.2ms)[0m  CREATE TABLE `prototypes` (`id` int(11) auto_increment PRIMARY KEY, `title` varchar(255), `catch_copy` varchar(255), `concept` text, `user_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_prototypes_on_user_id`  (`user_id`) ) ENGINE=InnoDB
+  [1m[36m (19.2ms)[0m  [1mALTER TABLE `prototypes` ADD CONSTRAINT `fk_rails_8add56efc2`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20160405022458')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+Migrating to CreateCapturedImages (20160405022520)
+  [1m[36m (26.7ms)[0m  [1mCREATE TABLE `captured_images` (`id` int(11) auto_increment PRIMARY KEY, `content` varchar(255), `status` int(11), `prototype_id` int(11),  INDEX `index_captured_images_on_prototype_id`  (`prototype_id`) ) ENGINE=InnoDB[0m
+  [1m[35m (22.0ms)[0m  ALTER TABLE `captured_images` ADD CONSTRAINT `fk_rails_9e708a4f57`
+FOREIGN KEY (`prototype_id`)
+  REFERENCES `prototypes` (`id`)
+
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20160405022520')
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Migrating to AddLikeCountToPrototypes (20180322003616)
+  [1m[35m (34.4ms)[0m  ALTER TABLE `prototypes` ADD `like_count` int(11)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20180322003616')
+  [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateLikes (20180322010618)
+  [1m[35m (30.3ms)[0m  CREATE TABLE `likes` (`id` int(11) auto_increment PRIMARY KEY, `user_id` int(11) NOT NULL, `prototype_id` int(11) NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20180322010618')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateComments (20180323004148)
+  [1m[35m (30.0ms)[0m  CREATE TABLE `comments` (`id` int(11) auto_increment PRIMARY KEY, `user_id` int(11) NOT NULL, `prototype_id` int(11) NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (19.2ms)[0m  [1mALTER TABLE `comments` ADD CONSTRAINT `fk_rails_03de2dc08c`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+[0m
+  [1m[35m (18.3ms)[0m  ALTER TABLE `comments` ADD CONSTRAINT `fk_rails_5a7b40847a`
+FOREIGN KEY (`prototype_id`)
+  REFERENCES `prototypes` (`id`)
+
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20180323004148')
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to ActsAsTaggableOnMigration (20180329011125)
+  [1m[35m (9.6ms)[0m  CREATE TABLE `tags` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255)) ENGINE=InnoDB
+  [1m[36m (11.0ms)[0m  [1mCREATE TABLE `taggings` (`id` int(11) auto_increment PRIMARY KEY, `tag_id` int(11), `taggable_id` int(11), `taggable_type` varchar(255), `tagger_id` int(11), `tagger_type` varchar(255), `context` varchar(128), `created_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (10.0ms)[0m  CREATE  INDEX `index_taggings_on_tag_id`  ON `taggings` (`tag_id`) 
+  [1m[36m (9.0ms)[0m  [1mCREATE  INDEX `index_taggings_on_taggable_id_and_taggable_type_and_context`  ON `taggings` (`taggable_id`, `taggable_type`, `context`) [0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20180329011125')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+Migrating to AddMissingUniqueIndices (20180329011126)
+  [1m[36m (27.6ms)[0m  [1mCREATE UNIQUE INDEX `index_tags_on_name`  ON `tags` (`name`) [0m
+  [1m[35m (8.5ms)[0m  DROP INDEX `index_taggings_on_tag_id` ON `taggings`
+  [1m[36m (7.8ms)[0m  [1mDROP INDEX `index_taggings_on_taggable_id_and_taggable_type_and_context` ON `taggings`[0m
+  [1m[35m (10.8ms)[0m  CREATE UNIQUE INDEX `taggings_idx`  ON `taggings` (`tag_id`, `taggable_id`, `taggable_type`, `context`, `tagger_id`, `tagger_type`) 
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20180329011126')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to AddTaggingsCounterCacheToTags (20180329011127)
+  [1m[35m (13.7ms)[0m  ALTER TABLE `tags` ADD `taggings_count` int(11) DEFAULT 0
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT  `tags`.* FROM `tags`  ORDER BY `tags`.`id` ASC LIMIT 1000[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20180329011127')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to AddMissingTaggableIndex (20180329011128)
+  [1m[36m (8.9ms)[0m  [1mCREATE  INDEX `index_taggings_on_taggable_id_and_taggable_type_and_context`  ON `taggings` (`taggable_id`, `taggable_type`, `context`) [0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20180329011128')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+Migrating to ChangeCollationForTagNames (20180329011129)
+  [1m[36m (21.7ms)[0m  [1mALTER TABLE tags MODIFY name varchar(255) CHARACTER SET utf8 COLLATE utf8_bin;[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20180329011129')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (2.6ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'protospace-in-dev_development'
+  AND fk.table_name = 'captured_images'
+
+  [1m[36m (0.2ms)[0m  [1mSHOW CREATE TABLE `captured_images`[0m
+  [1m[35m (0.3ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'protospace-in-dev_development'
+  AND fk.table_name = 'comments'
+
+  [1m[36m (0.2ms)[0m  [1mSHOW CREATE TABLE `comments`[0m
+  [1m[35m (0.3ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'protospace-in-dev_development'
+  AND fk.table_name = 'likes'
+
+  [1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `likes`[0m
+  [1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'protospace-in-dev_development'
+  AND fk.table_name = 'prototypes'
+
+  [1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `prototypes`[0m
+  [1m[35m (0.3ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'protospace-in-dev_development'
+  AND fk.table_name = 'taggings'
+
+  [1m[36m (0.2ms)[0m  [1mSHOW CREATE TABLE `taggings`[0m
+  [1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'protospace-in-dev_development'
+  AND fk.table_name = 'tags'
+
+  [1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `tags`[0m
+  [1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'protospace-in-dev_development'
+  AND fk.table_name = 'users'
+
+  [1m[36m (0.2ms)[0m  [1mSHOW CREATE TABLE `users`[0m
+
+
+Started GET "/groups/1/messages" for ::1 at 2018-04-02 10:50:21 +0900
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+
+ActionController::RoutingError (No route matches [GET] "/groups/1/messages"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/keiji/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/keiji/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/keiji/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/keiji/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/keiji/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered /Users/keiji/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.8ms)
+  Rendered /Users/keiji/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (11.6ms)
+  Rendered /Users/keiji/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (154.8ms)
+  Rendered /Users/keiji/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/keiji/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/keiji/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/keiji/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/keiji/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (88.3ms)
+  Rendered /Users/keiji/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/keiji/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/keiji/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (205.4ms)
+
+
+Started GET "/" for ::1 at 2018-04-02 10:50:29 +0900
+Processing by PrototypesController#index as HTML
+  [1m[36mPrototype Load (0.3ms)[0m  [1mSELECT  `prototypes`.* FROM `prototypes`  ORDER BY created_at DESC LIMIT 2 OFFSET 0[0m
+  Rendered prototypes/_prototype.html.haml (0.0ms)
+  Rendered prototypes/index.html.haml within layouts/application (267.5ms)
+  Rendered shared/_header.html.haml (10.9ms)
+  Rendered shared/_messages.html.haml (2.1ms)
+  Rendered shared/_footer.html.haml (2.0ms)
+Completed 200 OK in 405ms (Views: 349.1ms | ActiveRecord: 24.1ms)
+
+
+Started GET "/assets/application.self-bdd5aa6b92aa20d21634f0b8bba32eb75f0cc87f67ee19d7d1fe5d73e3354fba.css?body=1" for ::1 at 2018-04-02 10:50:30 +0900
+
+
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for ::1 at 2018-04-02 10:50:30 +0900
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2018-04-02 10:50:30 +0900
+
+
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for ::1 at 2018-04-02 10:50:30 +0900
+
+
+Started GET "/assets/logo-b99f177af8fb82de2d6d7b86e95c7f329d3d143edd8b225bc2875ad9dd6e0cc3.png" for ::1 at 2018-04-02 10:50:30 +0900
+
+
+Started GET "/assets/header_logo-8d6ed49cb878026108dcfff6307c69ed2159e006f3ca557869cbfa1cc655a672.png" for ::1 at 2018-04-02 10:50:30 +0900
+
+
+Started GET "/assets/header_bg-7f8478d544f567fa0568c7851ea2a3d9b914a090658efc7770e6e1d85842b7ef.png" for ::1 at 2018-04-02 10:50:30 +0900
