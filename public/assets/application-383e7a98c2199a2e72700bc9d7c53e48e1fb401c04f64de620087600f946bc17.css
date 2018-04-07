@@ -9090,26 +9090,38 @@ body {
   border-radius: 0;
   padding: 0;
 }
-/* line 297, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 295, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+.proto-content .thumbnail .btn-tag {
+  width: 100%;
+  height: 50px;
+  border-radius: 2px;
+  background-color: #eee;
+  font-family: Lato, 'Helvetica Neue', 'Helvetica, Arial', sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  color: #999;
+  padding: 5px 5px 3px;
+}
+/* line 308, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .proto-content h3 {
   margin: 0;
   font-size: 1.6rem;
 }
-/* line 302, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 313, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .proto-content .proto-meta {
   overflow: hidden;
   font-size: 1.2rem;
   padding: 10px 0;
 }
-/* line 307, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 318, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .proto-content .proto-meta .proto-user {
   float: left;
 }
-/* line 311, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 322, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .proto-content .proto-meta .proto-posted {
   float: right;
 }
-/* line 316, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 327, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .proto-content .btn {
   font-size: 1rem;
   padding: 5px;
@@ -9117,71 +9129,71 @@ body {
   border: 1px solid #eee;
 }
 
-/* line 325, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 336, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .proto-page .user-nav {
   padding: 50px 0;
 }
-/* line 328, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 339, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .proto-page .user-nav .media-object {
   border-radius: 50%;
 }
-/* line 332, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 343, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .proto-page .user-nav button {
   padding-right: 35px;
 }
-/* line 335, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 346, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .proto-page .user-nav button img {
   max-width: 18px;
   margin-right: 5px;
 }
-/* line 340, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 351, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .proto-page .user-nav button .num {
   font-weight: bold;
 }
-/* line 346, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 357, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .proto-page .proto-description {
   padding: 20px 0 10px;
 }
-/* line 351, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 362, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .proto-page .proto-comments h4 {
   padding-bottom: 20px;
 }
-/* line 355, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 366, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .proto-page .proto-comments form {
   margin: 40px 0;
 }
-/* line 360, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 371, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .proto-page .proto-comments .form-group textarea {
   width: 100%;
 }
 
-/* line 368, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 379, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .user-page .user-nav {
   padding: 50px 0;
 }
-/* line 371, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 382, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .user-page .user-nav .media-object {
   border-radius: 50%;
 }
-/* line 375, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 386, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .user-page .user-nav button {
   padding-right: 35px;
 }
-/* line 378, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 389, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .user-page .user-nav button img {
   max-width: 18px;
   margin-right: 5px;
 }
-/* line 383, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 394, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .user-page .user-nav button .num {
   font-weight: bold;
 }
 
-/* line 390, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 401, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .proto-new {
   padding-top: 20px;
 }
-/* line 393, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 404, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .proto-new input[type="text"],
 .proto-new textarea {
   border: 0;
@@ -9194,25 +9206,27 @@ body {
   background-color: transparent;
   margin-bottom: 20px;
 }
-/* line 405, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 416, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .proto-new input[type="text"]:hover,
 .proto-new textarea:hover {
   color: #1a1a1a;
   box-shadow: 0 1px 1px #eee;
 }
-/* line 411, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 422, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .proto-new .proto-new-title {
   line-height: 60px;
   font-size: 24px;
 }
-/* line 416, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 427, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .proto-new .cover-image-upload {
   background: url(/assets/noimage-big-25c2ec470f6bb4ba4724d25436f786aa9d9cc3e080300063eec413fc8d8ff65e.png) #fff no-repeat center center;
   height: 500px;
   position: relative;
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
 }
-/* line 422, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 435, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .proto-new .cover-image-upload input {
   position: absolute;
   left: 0;
@@ -9224,18 +9238,26 @@ body {
   filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
   cursor: pointer;
 }
-/* line 435, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 446, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+.proto-new .cover-image-upload img {
+  max-height: 500px;
+  max-width: 100%;
+}
+/* line 452, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .proto-new .list-group-item {
   border: 0;
   margin-bottom: 20px;
 }
-/* line 439, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 456, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .proto-new .list-group-item .image-upload {
   background: url(/assets/noimage-fd3ad275fb1eeb5833d37ea27786805eb20c588c67825da9e4ad6a22d43a86fe.png) #fff no-repeat center center;
   height: 200px;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-/* line 444, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 464, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .proto-new .list-group-item .image-upload input {
   position: absolute;
   left: 0;
@@ -9247,30 +9269,35 @@ body {
   filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
   cursor: pointer;
 }
-/* line 457, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 475, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+.proto-new .list-group-item .image-upload img {
+  max-height: 200px;
+  max-width: 100%;
+}
+/* line 481, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .proto-new .list-group-item .image-upload-plus {
   height: 200px;
   width: 100%;
   text-align: center;
 }
-/* line 462, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 486, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .proto-new .list-group-item .image-upload-plus span {
   color: #D1D7DB;
   font-size: 70px;
   padding-top: 50px;
   display: inline-block;
 }
-/* line 470, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 494, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .proto-new .proto-btn {
   max-width: 300px;
   margin: auto;
 }
 
-/* line 476, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 500, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .user-new {
   padding-top: 20px;
 }
-/* line 479, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 503, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .user-new input[type="email"],
 .user-new input[type="text"],
 .user-new input[type="password"],
@@ -9285,7 +9312,7 @@ body {
   background-color: transparent;
   margin-bottom: 20px;
 }
-/* line 493, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 517, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .user-new input[type="email"]:hover,
 .user-new input[type="text"]:hover,
 .user-new input[type="password"]:hover,
@@ -9293,21 +9320,21 @@ body {
   color: #1a1a1a;
   box-shadow: 0 1px 1px #eee;
 }
-/* line 498, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 522, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .user-new input[type="email"].user-name,
 .user-new input[type="text"].user-name,
 .user-new input[type="password"].user-name,
 .user-new textarea.user-name {
   margin-top: 20px;
 }
-/* line 503, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 527, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .user-new .user-email,
 .user-new .user-name,
 .user-new .user-password {
   line-height: 60px;
   font-size: 24px;
 }
-/* line 510, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 534, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .user-new .user-image {
   border: 2px solid #ddd;
   border-radius: 50%;
@@ -9317,7 +9344,7 @@ body {
   background-color: #fff;
   background-size: cover;
 }
-/* line 519, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 543, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .user-new .user-image button {
   font-size: 9px;
   position: absolute;
@@ -9330,7 +9357,7 @@ body {
   min-width: 75px;
   text-transform: capitalize;
 }
-/* line 532, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 556, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .user-new .user-image input {
   display: block;
   position: absolute;
@@ -9344,28 +9371,28 @@ body {
   opacity: 0;
   filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
 }
-/* line 546, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 570, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .user-new .user-btn {
   max-width: 300px;
   margin: auto;
 }
 
-/* line 552, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 576, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .form-signin {
   max-width: 330px;
   padding: 15px;
   margin: 0 auto;
 }
-/* line 557, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 581, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .form-signin .form-signin-heading {
   margin-bottom: 30px;
 }
-/* line 561, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 585, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .form-signin .checkbox {
   margin-bottom: 10px;
   font-weight: normal;
 }
-/* line 566, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 590, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .form-signin .form-control {
   position: relative;
   height: auto;
@@ -9375,11 +9402,11 @@ body {
   padding: 10px;
   font-size: 16px;
 }
-/* line 574, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 598, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .form-signin .form-control:focus {
   z-index: 2;
 }
-/* line 579, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 603, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .form-signin input[type="email"],
 .form-signin input[type="password"] {
   border: 0;
@@ -9392,20 +9419,20 @@ body {
   background-color: transparent;
   margin-bottom: 10px;
 }
-/* line 591, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 615, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .form-signin input[type="email"]:hover,
 .form-signin input[type="password"]:hover {
   color: #1a1a1a;
   box-shadow: 0 1px 1px #eee;
 }
 
-/* line 599, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 623, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .tag-project {
   height: 10px;
   text-align: center;
 }
 
-/* line 604, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 628, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .tag-name {
   margin-bottom: 10px;
   width: 100%;
@@ -9417,8 +9444,29 @@ body {
   font-weight: 200;
 }
 
+/* line 639, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+.row.proto-comment {
+  font-family: "Lato", 'Helvetica Neue, Helvetica, Arial', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #212121;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga", "kern";
+}
+
+/* line 652, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+.form_control {
+  width: 600px;
+  height: 80px;
+}
+
 /* -- flash messages ------------------------------------ */
-/* line 617, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 658, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .alert {
   margin: 0;
   padding: 15px;
@@ -9427,16 +9475,55 @@ body {
   border-radius: 4px;
 }
 
-/* line 626, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 667, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .alert--success {
   background-color: #dff0d8;
   border-color: #d6e9c6;
   color: #468847;
 }
 
-/* line 632, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+/* line 673, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
 .alert--danger {
   background-color: #f2dede;
   border-color: #ebccd1;
   color: #a94442;
+}
+
+/* line 679, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+.tag-list-number {
+  display: block;
+  font-size: 1.3rem;
+  border-radius: 2px;
+  margin: 0 -2px 2px;
+}
+
+/* -- comments#show ------------------------------------ */
+/* line 687, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/* line 692, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+.comment_heigth_block {
+  background-color: #eee;
+  width: 720px;
+  overflow: scroll;
+}
+/* line 696, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+.comment_heigth_block .comment {
+  height: 80px;
+  padding-top: 12px;
+  padding-left: 12px;
+}
+/* line 700, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+.comment_heigth_block .comment__name {
+  font-size: 1.3em;
+  display: inline-block;
+}
+/* line 704, /Users/keiji/projects/proto_space/app/assets/stylesheets/protospace.css.scss */
+.comment_heigth_block .comment__date {
+  display: inline-block;
+  margin-left: 10px;
 }
