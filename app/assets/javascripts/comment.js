@@ -1,16 +1,16 @@
 $(function() {
   function buildHTML(comment){
-    var html = `<div class="comment">
-                <p class="comment__name">
-                  ${comment.user_name}
-                </p>
-                <p class="comment__date">
-                  ${comment.user_date}
-                </p>
-                <p class="comment__text">
-                  ${comment.text}
-                </p>
-                </div>`
+    var html = '<div class="comment">' +
+                  '<p class="comment__name">' +
+                    comment.user_name +
+                  '</p>' +
+                  '<p class="comment__date">' +
+                    comment.user_date +
+                  '</p>' +
+                  '<p class="comment__text">' +
+                    comment.text +
+                  '</p>' +
+                '</div>';
     return html;
   }
 
