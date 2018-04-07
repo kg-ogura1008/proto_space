@@ -5,7 +5,7 @@ $(function() {
                     comment.user_name +
                   '</p>' +
                   '<p class="comment__date">' +
-                    comment.user_date +
+                    comment.date +
                   '</p>' +
                   '<p class="comment__text">' +
                     comment.text +
