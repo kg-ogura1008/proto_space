@@ -1,14 +1,31 @@
 class CommentsController < ApplicationController
+	before_action :set_prototype
+
 	def create
-		@comment = Comment.create(text: params[:text], prototype_id: params[:prototype_id], user_id: current_user.id)
-		# redirect_to "/prototype/#{@comment.prototype_id}"
-		respond_to do |format|
-			format.html{ redirect_to prototype_path(params[:prototype_id]) }
-			format.json
+		@comment = @prototype.comments.new(text: comment_params[:text], user_id: comment_params[:user_id], prototype_id: params[:prototype_id])
+		if @comment.save
+			respond_to do |format|
+      	format.html { redirect_to prototype_path(@prototype) }
+				format.json
+			end
+		else
+			@comment = @prototype.comment.includes(:user)
+			flash.now[:alert] = 'メッセージを入力してください'
+			redirect_to prototype_path(@prototype)
+		end
 	end
 
-	private 
+	private
 	def comment_params
-		params.permit(:text, :prototype_id)
+		params.require(:comment).permit(:text).merge(user_id: current_user.id)
+	end
+
+	def set_prototype
+		@prototype = Prototype.find(params[:prototype_id])
 	end
 end
+
+
+
+
+

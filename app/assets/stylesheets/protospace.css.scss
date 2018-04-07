@@ -683,3 +683,30 @@ body {
     margin: 0 -2px 2px;
 }
 
+/* -- comments#show ------------------------------------ */
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.comment_heigth_block {
+  background-color: #eee;
+  width: 720px;
+  overflow: scroll;
+  .comment {
+    height: 80px;
+    padding-top: 12px;
+    padding-left: 12px;
+    &__name {
+      font-size: 1.3em;
+      display: inline-block;
+    }
+    &__date {
+      display: inline-block;
+      margin-left: 10px;
+    }
+    &__text {
+
+    }
+  }
+}

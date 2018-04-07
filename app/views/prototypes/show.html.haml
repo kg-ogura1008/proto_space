@@ -56,9 +56,12 @@
       .form-inline
         .form
           %h4 Write a comment
+          .comment_slider_block
+            .comment_heigth_block
+              = render @comments
           .row
             .form-group.col-md-10
             / - if current_user
-            = form_for prototype_path do |f|
+            = form_for [@prototype, @comment] do |f|
               = f.text_field :text, class: 'form_control', placeholder: 'Sign in to put your comment'
               = f.submit "Comment",id:'button', class: 'btn btn-primary'
